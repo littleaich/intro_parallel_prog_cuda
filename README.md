@@ -1,1 +1,1 @@
-# intro_parallel_prog_cuda
+#### Introduction to Parallel Programming with CUDA
