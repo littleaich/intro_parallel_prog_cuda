@@ -52,9 +52,10 @@ void rgba_to_greyscale(const uchar4* const rgbaImage,
     //calculate a 1D offset
     int col = threadIdx.x;
     int row = blockIdx.x;
-    uchar4 rgba = rgbaImage[row * numCols + col];
+    int ind_lin = row * numCols + col;
+    uchar4 rgba = rgbaImage[ind_lin];
     float channelSum = .299f * rgba.x + .587f * rgba.y + .114f * rgba.z;
-    greyImage[row * numCols + col] = channelSum;
+    greyImage[ind_lin] = channelSum;
 }
 
 void your_rgba_to_greyscale(const uchar4 * const h_rgbaImage, uchar4 * const d_rgbaImage,

@@ -6,7 +6,7 @@ __global__ void cube(float * d_out, float * d_in){
 	float f = d_in[idx];
 	//d_out[idx] = f * f * f;	
 	//d_out[idx] = d_in[idx] * d_in[idx] * d_in[idx];
-	d_out[idx] = d_in[idx] * d_in[idx];
+	d_out[idx] = f * f;
 }
 
 int main(int argc, char ** argv) {
